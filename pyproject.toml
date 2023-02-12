@@ -1,0 +1,29 @@
+[build-system]
+# Minimum requirements for the build system to execute.
+requires = ["setuptools", "wheel"]  # PEP 508 specifications.
+
+[project]
+name = "{{project_name}}"
+authors = [
+    {name = "{{author}}"},
+]
+description = "{{project_short_description}}"
+readme = "README.md"
+version = "0.1"
+requires-python = ">={{python_version}}"
+dependencies = []
+
+[project.optional-dependencies]
+test = [
+    "pytest",
+]
+dev = [
+    "{{project_name}}[test]",
+    "flake8",
+    "mypy",
+    "pre-commit",
+    "wemake-python-styleguide",
+]
+
+[tool.setuptools.packages.find]
+exclude = ["test"]
