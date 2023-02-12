@@ -5,10 +5,6 @@ repos:
     rev: 4.0.1
     hooks:
     -   id: flake8
-        additional_dependencies: [
-          "wemake-python-styleguide",
-        ]
-        args: ["--config=.flake8"]
 
 -   repo: https://github.com/pre-commit/pre-commit-hooks
     rev: v4.3.0
@@ -20,13 +16,9 @@ repos:
     -   id: debug-statements
         exclude: |
             (?x)^(
-                .venv|
-                venv|
-                docs|
-                img|
-                notebooks|
-                reports|
-                .git|
+                .git/|
+                .venv/|
+                venv/|
             )$
 
 # Imports order
@@ -40,20 +32,3 @@ repos:
     rev: v2.2.3
     hooks:
     -   id: add-trailing-comma
-
-# MyPy
--   repo: https://github.com/pre-commit/mirrors-mypy
-    rev: v1.0.0  # Use the sha / tag you want to point at
-    hooks:
-    -   id: mypy
-        exclude: |
-            (?x)^(
-                .venv|
-                venv|
-                docs|
-                img|
-                notebooks|
-                reports|
-                .git|
-                test|
-            )$
