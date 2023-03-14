@@ -29,3 +29,25 @@ exclude = ["test"]
 
 [tool.setuptools.package-data]
 {{package_name}} = ["py.typed"]
+
+[tool.mypy]
+disallow_untyped_defs = true
+disallow_any_unimported = true
+no_implicit_optional = true
+check_untyped_defs = true
+warn_return_any = true
+warn_unused_ignores = true
+show_error_codes = true
+exclude = '''(?x)^(
+    .git/|
+    .venv/|
+    venv/|
+  )$'''
+
+[tool.black]
+line-length = 89
+extend-exclude = '''(?x)^(
+    .git/|
+    .venv/|
+    venv/|
+  )$'''
