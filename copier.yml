@@ -20,4 +20,4 @@ author:
 
 python_version:
     type: str
-    help: Which python version is used?
+    help: Which python version (in format x.y, e.g., 3.10) is used?
