@@ -24,6 +24,9 @@ dev = [
     "pre-commit",
 ]
 
+[tool.setuptools.package-data]
+"{{ package_name }}" = ["py.typed"]
+
 [tool.pytest.ini_options]
 testpaths = ["tests"]
 
