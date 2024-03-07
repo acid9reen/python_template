@@ -6,3 +6,23 @@
 ---
 
 {{project_short_description}}
+
+
+---
+
+## Developer corner
+
+### Pre-commit hooks
+
+There are some pre-commit hooks available, to install them run
+```bash
+pre-commit install
+```
+
+### Task runner
+
+There are some make recipes available:
+* lint (use ruff and mypy to lint code)
+* deps (generate and install (hopefully in venv) dependencies from
+    pyproject.toml, install local package in editable mode)
+* test (run all pytest tests)
